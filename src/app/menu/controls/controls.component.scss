@@ -1,0 +1,14 @@
+.buttons {
+  ion-button {
+    width: 100%;
+    color: white;
+  }
+
+  .focused {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .focused:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

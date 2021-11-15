@@ -1,0 +1,27 @@
+.game-rules {
+    width: 100%;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
+
+    // .title {
+    //     padding-left: 1em;
+    // }
+
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+ion-item {
+    color: white;
+    --background: rgba(0, 0, 0, 0);
+}
+
+ion-toolbar {
+    --background: rgba(0, 0, 0, 0);
+    ion-button {
+        margin-left: 1em;
+        margin-right: 1em;
+        --color: white;
+        --background: rgba(0, 0, 0, 0.05);
+    }
+}

@@ -1,0 +1,48 @@
+ <ion-toolbar>
+  <ion-title size="large"> Key Bindings </ion-title>
+</ion-toolbar>
+
+
+<div class="buttons">
+
+  <ion-button (click)="activate($event.target)" id="turnLeft" (mouseenter)="audio.play('click')" fill="clear">
+    rotate left: {{tempKeys.turnLeft}}
+  </ion-button>
+
+  <ion-button (click)="activate($event.target)" id="turnRight" (mouseenter)="audio.play('click')" fill="clear">
+    rotate right: {{tempKeys.turnRight}}
+  </ion-button>
+
+  <ion-button (click)="activate($event.target)" id="moveLeft" (mouseenter)="audio.play('click')" fill="clear">
+    move left: {{tempKeys.moveLeft}}
+  </ion-button>
+
+  <ion-button (click)="activate($event.target)" id="moveRight" (mouseenter)="audio.play('click')" fill="clear">
+    move right: {{tempKeys.moveRight}}
+  </ion-button>
+
+  <ion-button (click)="activate($event.target)" id="dallDown" (mouseenter)="audio.play('click')" fill="clear">
+    fall down: {{tempKeys.fallDown}}
+  </ion-button>
+
+  <ion-button (click)="activate($event.target)" id="back" (mouseenter)="audio.play('click')" fill="clear">
+    back: {{tempKeys.back}}
+  </ion-button>
+
+  <ion-button (click)="resetKeys()" (mouseenter)="audio.play('click')" fill="clear">
+    reset to default
+  </ion-button>
+
+</div>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="back()" class="ion-float-left" fill="clear" (mouseenter)="audio.play('click')">
+       back
+    </ion-button>
+
+    <ion-button (click)="apply()" class="ion-float-right" fill="clear" (mouseenter)="audio.play('click')">
+       apply
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

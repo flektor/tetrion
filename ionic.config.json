@@ -1,0 +1,7 @@
+{
+  "name": "tetrion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

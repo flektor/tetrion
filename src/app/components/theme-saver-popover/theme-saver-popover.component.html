@@ -1,0 +1,20 @@
+<ion-content class='ion-padding'>
+
+  <h1> Please set a theme title </h1>
+
+  <ion-item>
+    <ion-label>Title:</ion-label>
+    <ion-input #input type='text' placeholder='Type a new title!' (ionChange)='rename(input.value)'></ion-input>
+  </ion-item>
+
+
+
+  <p [class]='doesTitleExist?"exist-title-message": "error-message"'>{{errorMessage}}</p> <br>
+
+  <ion-button class='ion-float-left' (click)='back()'> back </ion-button>
+  <ion-button class='ion-float-right' [disabled]='!hasValidTitle' (click)='apply()'>
+    {{doesTitleExist? 'override': 'apply'}}
+  </ion-button>
+
+
+</ion-content>

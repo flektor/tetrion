@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+    <ion-grid>
+        <ion-row class='ion-justify-content-center'>
+            <ion-col>
+
+                <h2 class='title '>Register</h2>
+                <ion-list>
+
+                    <ion-item>
+                        <ion-label color='light' position="floating">Username</ion-label>
+                        <ion-input color='light' type="text" [(ngModel)]="username"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label color='light' position="floating">Password</ion-label>
+                        <ion-input color='light' type="password" [(ngModel)]="password"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label color='light' position="floating">Confirm Password</ion-label>
+                        <ion-input color='light' type="password" [(ngModel)]="cpassword"></ion-input>
+                    </ion-item>
+
+                </ion-list>
+
+                <ion-button color='light' fill="solid" expand="block" color="dark" (click)="register()"> Register </ion-button>
+
+                <button class="link-button" (click)="goToLoginPage()">Login</button>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

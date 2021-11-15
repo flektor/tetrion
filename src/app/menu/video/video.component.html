@@ -1,0 +1,52 @@
+<ion-toolbar>
+  <ion-title size="large"> Video Settings </ion-title>
+</ion-toolbar>
+
+<ion-item>
+  <ion-checkbox #antialias [checked]="user.config.video.hasAntialias" (ionChange)="setAntialias(antialias.checked)">
+  </ion-checkbox>
+  <h3 class="checkbox-text">antialiasing</h3>
+</ion-item>
+
+
+<ion-item>
+  <ion-checkbox #stats [checked]="user.config.video.showStats" (ionChange)="setStatsVisible(stats.checked)">
+  </ion-checkbox>
+  <h3 class="checkbox-text">show fps</h3>
+</ion-item>
+
+
+<ion-item>
+  <ion-checkbox #castShadows [checked]="user.config.video.castShadows"
+    (ionChange)="setCastShadows(castShadows.checked)">
+  </ion-checkbox>
+  <h3 class="checkbox-text">cast shadows</h3>
+</ion-item>
+
+
+<!-- <ion-item [disabled]="!castShadows.checked">
+  <ion-checkbox #receiveShadows [checked]="user.config.video.receiveShadows"
+    (ionChange)="setReceiveShadows(receiveShadows.checked)">
+  </ion-checkbox>
+  <h3 class="checkbox-text">receive shadows</h3>
+</ion-item> -->
+
+
+<ion-item>
+  <ion-checkbox #fog [checked]="user.config.video.hasFog" (ionChange)="setFog(fog.checked)"></ion-checkbox>
+  <h3 class="checkbox-text">enable fog</h3>
+</ion-item>
+
+<br>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="back()" class="ion-float-left" fill="clear" (mouseenter)="audio.play('click')">
+      back
+    </ion-button>
+
+    <ion-button (click)="apply()" class="ion-float-right" fill="clear" (mouseenter)="audio.play('click')">
+      apply
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

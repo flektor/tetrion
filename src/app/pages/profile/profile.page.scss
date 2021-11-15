@@ -1,0 +1,65 @@
+// .achievments {
+//   list-style-type: none;
+//   width: 500px;
+// }
+
+// .achievments li {
+//   display: inline;
+//   list-style-type: none;
+//   float: left;
+//   margin: 10px;
+//   background: grey;
+//   width: 128px;
+//   height: 128px;
+// }
+
+.username {
+  text-align: center;
+}
+.career-summary {
+  margin-left: 20px;
+  color: white;
+  max-width: 40em;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile {
+  margin-right: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+.level {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.game-mode {
+  color: white;
+  font-size: 1.8em;
+}
+
+ion-select {
+  color: white;
+  font-size: 1.8em;
+}
+
+ion-button {
+  --background: rgba(0, 0, 0, 0);
+  color: white;
+}
+// .level {
+//   list-style-type: none;
+//   margin: 10px;
+//   background: grey;
+// }

@@ -1,0 +1,34 @@
+<!-- <ion-content class="ion-padding"> -->
+
+  <ion-list class='game-rules'>
+    <h3 class='title'>Game Rules</h3>
+
+    <ion-item>
+      <ion-label position="fixed">Rows</ion-label>
+      <ion-input type="number" [min]="minRows" [max]="maxRows" [value]="rows" (ionChange)='setRows($event)'>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">Columns</ion-label>
+      <ion-input type="number" [min]="minCols" [max]="maxCols" [value]="cols" (ionChange)='setCols($event)'>
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+
+
+<!-- </ion-content> -->
+
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-button (click)="back()" class="ion-float-left" fill="clear" (mouseenter)="audio.play('click')">
+          back
+      </ion-button>
+
+      <ion-button (click)="apply()" class="ion-float-right" fill="clear" (mouseenter)="audio.play('click')">
+          apply
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>

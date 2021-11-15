@@ -1,0 +1,20 @@
+<ion-toolbar>
+  <ion-title size="large"> Exit Game </ion-title>
+</ion-toolbar> 
+
+  Any progress will lost!
+  <br><br>
+  Exit anyway?
+  <br><br><br>
+ 
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="back()" class="ion-float-left" fill="clear" (mouseenter)="audio.play('click')">
+      back
+    </ion-button>
+
+    <ion-button (click)="apply()" class="ion-float-right" fill="clear" (mouseenter)="audio.play('click')">
+      apply
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

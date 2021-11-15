@@ -1,0 +1,45 @@
+<ion-toolbar>
+    <ion-title size="large"> Audio Settings </ion-title>
+</ion-toolbar>
+
+
+<ion-item>
+    <ion-checkbox #checkbox1 [checked]="user.config.audio.isMusicEnabled"
+        (ionChange)="setMusicVolume(checkbox1.checked)" (mouseenter)="audio.play('click')"></ion-checkbox>
+    <h3 class="checkbox-text">music</h3>
+</ion-item>
+
+{{user.config.audio.musicVolume}} %
+<ion-item-divider>
+    <ion-range #range1 min="1" max="100" step="1" [value]="user.config.audio.musicVolume"
+        [disabled]="!user.config.audio.isMusicEnabled" (ionChange)="setMusicVolume(checkbox1.checked, range1.value)"
+        (mouseenter)="audio.play('click')"></ion-range>
+</ion-item-divider>
+
+<ion-item>
+    <ion-checkbox #checkbox2 [checked]="user.config.audio.isSoundsEnabled"
+        (ionChange)="setSoundsVolume(checkbox2.checked)" (mouseenter)="audio.play('click')"></ion-checkbox>
+    <h3 class="checkbox-text">sounds</h3>
+</ion-item>
+
+
+<div class="center-text"> {{user.config.audio.soundsVolume}} % </div>
+<ion-item-divider>
+    <ion-range #range2 min="1" max="100" step="1" [value]="user.config.audio.soundsVolume"
+        [disabled]="!user.config.audio.isSoundsEnabled" (ionChange)="setSoundsVolume(checkbox2.checked, range2.value)"
+        (mouseenter)="audio.play('click')">
+    </ion-range>
+
+</ion-item-divider>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button (click)="back()" class="ion-float-left" fill="clear" (mouseenter)="audio.play('click')">
+            back
+        </ion-button>
+
+        <ion-button (click)="apply()" class="ion-float-right" fill="clear" (mouseenter)="audio.play('click')">
+            apply
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>

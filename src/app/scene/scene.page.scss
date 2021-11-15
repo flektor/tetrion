@@ -1,0 +1,205 @@
+body,
+html {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+ion-button {
+  --box-shadow:none;
+  text-transform: none;
+  text-align: center;
+  font-family: Play;
+  font-weight: bold;
+  color: orange;
+}
+
+.menu-button {
+  position: absolute;
+  top:7px;
+  right:0px;
+}
+
+app-menu{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0);
+  // background: rgba(0,0,0,0.05);
+
+}
+// ion-modal {
+//  background: rgba(0,0,0,0.05);
+// }
+
+.scene {
+  padding: 0;
+  margin: 0;
+  width:100%;
+  height: 100%;
+}
+
+.action-bar {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  color: grey;
+  font-family: Play;
+  font-weight: 900;
+  color: orange;
+  width: 357px;
+  height: 46px;
+  background-color: grey;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+.action-button {
+  display: inline-block;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.action-button img {
+  width: 46px;
+  height: 46px;
+  border-radius: 5px;
+}
+
+.ui-component {
+  width: 100%;
+  position: absolute;
+  top: 0; 
+  font-family: Play;
+  font-weight: 900;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: orange;
+}
+
+.timer {
+  width: 100%;
+  font-size: 20px;
+  width: 128px;
+  text-align: right;
+}
+
+.timer p {
+  float: right;
+}
+
+.game-over-sprite {
+  position: relative;
+  width: 100%;
+  font-size: 60px;
+  text-align: center;
+}
+
+
+.stats {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 128px;
+}
+
+.next-block {
+  width: 128px;
+  height: 128px;
+}
+
+.next-scene {
+  position: absolute;
+  top: 0px;
+  // right: 0px;
+}
+
+.level-bar {
+  position: relative;
+  top: -5px;
+  height: 15px;
+  font-size: 20px;
+  width: 128;
+  text-align: center;
+}
+
+.experience {
+  position: relative;
+  top: 10px;
+  width: 128px;
+  height: 20px;
+  font-size: 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #444444;
+  box-shadow: 0 0 2px #444444;
+}
+
+.xp-back {
+  height: 20px;
+  width: 128px;
+  background: black;
+  opacity: 0.07;
+}
+
+.xp-text {
+  position: relative;
+  top: -37px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.xp-bar {
+  position: relative;
+  top: -20px;
+  height: 18px;
+  width: 50%;
+  background: purple;
+  opacity: 0.9;
+}
+
+.turn-buttons {
+  position: absolute;
+  bottom:100px;
+  left:10px;
+  color: orange;
+}
+
+.move-buttons {
+  position: absolute;
+  bottom:50px;
+  right:40px;
+  color: orange;
+}
+
+.fall-button {
+  position: absolute;
+  bottom:40px;
+  left:40px;
+  color: orange;
+}
+
+.turn-left {
+  transform: scaleX(-1);
+   -moz-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   -ms-transform: scaleX(-1);
+}
+
+.stats {
+  position: absolute;
+  top:5px;
+  left: 10px;
+}
+
+.statsjs-component {
+  position: absolute;
+  bottom:0;
+  right: 0;
+}

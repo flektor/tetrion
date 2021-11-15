@@ -1,0 +1,42 @@
+<ion-content>
+
+    <ng-template #tabsTemplate>
+
+
+        <ion-tabs #tabs [@hide]='hideTabs()' (@hide.done)='animationDone()'>
+
+            <ion-tab-bar slot="top">
+
+                <ion-tab-button tab="play" (click)="setTab('/play', $event)">
+                    <ion-label>Play</ion-label>
+                    <!-- <ion-badge>6</ion-badge> -->
+                </ion-tab-button>
+
+                <ion-tab-button tab="skins" (click)="setTab('/skins', $event)">
+                    <ion-label>Skins</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="replays" (click)="setTab('/replays', $event)">
+                    <ion-label>Replays</ion-label>
+                </ion-tab-button>
+
+                <ion-tab-button tab="user.config.isGuest ? login : profile" (click)="setTab(user.config.isGuest ? '/login' : '/profile', $event)">
+                    <ion-label>{{user.config.isGuest ? 'Login' : 'Profile' }}</ion-label>
+                </ion-tab-button>
+
+                <ion-button *ngIf="!user.config.isGuest" fill="dark" (click)="logout()">
+                    <ion-icon name="log-out"></ion-icon>
+                </ion-button>
+
+
+            </ion-tab-bar>
+        </ion-tabs>
+
+    </ng-template>
+
+    <div *ngIf='areTabsActive; then tabsTemplate'></div>
+
+    <scene></scene>
+
+
+</ion-content>

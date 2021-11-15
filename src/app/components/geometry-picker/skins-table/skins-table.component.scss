@@ -1,0 +1,37 @@
+$skinSize: 128px;
+$gap: 3px;
+
+$width: 80vw;
+$height: 80vh; 
+
+.skins-grid-wrapper {
+  max-width: $width;
+  max-height: $height;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.skins-grid-container {
+  display: grid; 
+  width: $width;
+  height: $height;
+  grid-gap: $gap $gap;
+  grid-template-columns: repeat(auto-fit, minmax($skinSize, 1fr));
+}
+
+.skin {
+  width: $skinSize;
+  height: $skinSize;
+  border-style: 5px solid black;
+  border-radius: 5%;
+  background-color: rgb(231, 231, 231);
+}
+
+.active-skin {
+  background-color: var(--ion-color-primary);
+}
+
+.skin:hover {
+  background-color: var(--ion-color-primary);
+}

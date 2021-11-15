@@ -1,0 +1,24 @@
+ion-content {
+    --ion-background-color: transparent;
+    --ion-padding: 0px;
+    --overflow: hidden;
+    overflow: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.achievments {
+    font-family: Play;
+    font-weight: 700;
+    color: #c5d2e8;
+    width: 128px;
+    height: 128px;
+    cursor: default;
+    user-select: none;
+    /* Standard */
+}
+
+scene:focus {
+    outline: none;
+}

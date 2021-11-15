@@ -1,0 +1,134 @@
+$fontSize: 3.5vh;
+.preview {
+    position: absolute;
+    top: -500px;
+}
+
+.grid-button {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0);
+    .arrow-button {
+        font-size: 3em;
+    }
+}
+
+.hovered-grid-button {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.prev-button {
+    position: absolute;
+}
+
+.next-button {
+    position: absolute;
+}
+
+.margin-top-5vh {
+    margin-top: 5vh;
+}
+
+.margin-top-10vh {
+    margin-top: 10vh;
+}
+
+.margin-top-15vh {
+    margin-top: 15vh;
+}
+
+.margin-top-20vh {
+    margin-top: 20vh;
+}
+
+.grid-container {
+    max-height: 85vh;
+    margin-top: 0;
+    display: grid;
+    overflow: hidden;
+    // grid-template-columns: repeat(auto-fill, minmax(33.33vw, max-content));
+    //  .grid-button-min-height-50vh {
+    //      min-height: 50vh;
+    //      .arrow-button {
+    //          margin-top: 40vh;
+    //      }
+    //  }
+    //  .grid-button-min-height-40vh {
+    //      min-height: 40vh;
+    //      .arrow-button {
+    //          margin-top: 30vh;
+    //      }
+    //  }
+    // .prev-button {
+    // grid-row-start: 1;
+    // grid-row-end: 2;
+    // grid-column-start: 1;
+    // grid-column-end: 2; 
+    // }
+    // .next-button {
+    // // background-color: gray;
+    // grid-row-start: 1;
+    // grid-row-end: 2;
+    // grid-column-start: 2;
+    // grid-column-end: 3;  
+    // }
+    .side-theme-editor {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 6;
+        grid-column-end: 7;
+    }
+    .bottom-theme-editor {
+        padding-top: 50%;
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .theme-editor {
+        .color {
+            width: 1.2em;
+            height: 1.2em;
+            border: 0.1em solid var(--ion-color-primary);
+            border-radius: 0.1em;
+            user-select: none;
+        }
+        .color-item {
+            cursor: pointer;
+        }
+        .geometry-item {
+            cursor: pointer;
+        }
+        ion-label {
+            margin-left: 5px;
+        }
+        ion-list {
+            margin: 1em;
+        }
+        ion-item {
+            font-size: $fontSize;
+            color: rgb(255, 255, 255);
+        }
+        ion-button {
+            text-transform: none;
+            font-size: $fontSize;
+            box-shadow: none;
+            // font-family: Play;
+            // font-weight: bold;
+            color: white;
+        }
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

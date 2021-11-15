@@ -1,0 +1,39 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+    <ion-grid>
+        <ion-row class='ion-justify-content-center'>
+            <ion-col>
+
+                <h2 class='title '>Login</h2>
+
+                <!-- <form [formGroup]="validationsForm"> -->
+                <ion-list>
+
+                    <ion-item>
+                        <ion-label color='light' position="floating">Username</ion-label>
+                        <ion-input color='light' #input1 type="text" (keyup.enter)='input2.setFocus() '> </ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label color='light' position="floating">Password</ion-label>
+                        <ion-input color='light' #input2 type="password" (keyup.enter)='login() '></ion-input>
+                    </ion-item>
+
+                </ion-list>
+
+                <div class="error-message"> {{message}} </div>
+
+                <ion-button color='light' fill="solid" expand="block" color="dark" (click)="login()"> Login </ion-button>
+
+                <button class="link-button" (click)="goToRegisterPage()">Register</button>
+                <!-- <button class="link-button" (click)="offline()">Offline</button> -->
+                <!-- <button class="link-button" (click)="login(true)">Continue as guest</button> -->
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

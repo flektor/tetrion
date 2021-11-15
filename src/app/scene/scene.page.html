@@ -1,0 +1,70 @@
+<canvas width='100px' height='100px' class='scene' #scene></canvas>
+
+<div class='statsjs-component'>
+  <div #statsjs></div>
+  <!-- bricks: {{engine?.bricksCount}} <br>
+  bodies: {{engine?.world.bodiesCount}} <br>
+  objects: {{stage?.scene.children.length}} -->
+</div>
+
+
+<div class="next-block ion-float-right">
+  <canvas #nextScene class="next-scene"></canvas>
+</div>
+
+
+<div #ui class="ui-component ion-float-left">
+
+  <div class="stats" *ngIf='uiConfig.showLevelBar'>
+    <div class="level-bar"> level {{player?.level}} </div>
+
+    <div class="experience">
+      <div class="xp-back"></div>
+      <div class="xp-bar" [style.width.px]="getScoreBarWidth()"></div>
+      <div class="xp-text"> {{player?.experience}} / {{player?.levelExperience}}</div>
+    </div>
+  </div>
+
+  <div class="game-over-sprite" [style.top.px]="height * 2 / 6"> {{prevGameResult}} </div>
+
+  <message-sprite *ngFor="let sprite of sprites" [sprite]='sprite' (destroy)='removeMessageSprite(sprite)'>
+  </message-sprite>
+
+  <point-sprite *ngFor="let points of hitPoints" [hitPoints]="points" (destroy)='removePointSprite(points)'>
+  </point-sprite>
+</div>
+
+
+
+<ion-button class="menu-button" (mousedown)="menu()" fill="clear" (mouseenter)="audio.play('click')"
+  *ngIf='uiConfig.showMenuButton' [disabled]='!uiConfig.showMenuButton'>
+  <ion-icon name="menu-outline"></ion-icon>
+</ion-button>
+
+<div class="turn-buttons" *ngIf='uiConfig.showActionButtons'>
+
+  <ion-button (mousedown)="turn(1)" fill="clear">
+    <ion-icon name="return-down-back-outline"></ion-icon>
+  </ion-button>
+  <ion-button (mousedown)="turn(-1)" fill="clear">
+    <ion-icon name="return-down-forward-outline"></ion-icon>
+  </ion-button>
+
+</div>
+
+
+<div class="move-buttons" *ngIf='uiConfig.showActionButtons'>
+
+  <ion-button (mousedown)="move(-1)" fill="clear">
+
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
+  <ion-button (mousedown)="move(1)" fill="clear">
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+  </ion-button>
+
+</div>
+
+<ion-button class="fall-button" (mousedown)="fall(100)" fill="clear" *ngIf='uiConfig.showActionButtons'>
+  <ion-icon name="arrow-down-outline"></ion-icon>
+</ion-button>

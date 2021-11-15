@@ -1,0 +1,169 @@
+ion-content {
+    --overflow: hidden;
+}
+
+ion-grid {
+    min-width: 10em;
+    max-width: 30em;
+    width: 100%;
+    ion-icon {
+        font-size: 1.5em;
+        margin-top: -0.6em;
+        margin-right: -0.1em;
+    }
+    ion-icon:hover {
+        cursor: pointer;
+    }
+    ion-item {
+        color: white;
+    }
+}
+
+.game-rules-settings {
+    max-width: 1em;
+    font-size: 2em;
+    width: 1em;
+    margin-right: -1em;
+}
+
+.icon-button {
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-left: 0.2em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    .icon-button-text {
+        color: var(--ion-color-primary);
+        margin-top: -.75em;
+        // margin-right: 0.5em;
+    }
+}
+
+.play-button {
+    width: 100%;
+    font-size: 3em;
+    height: 3em;
+    --background: rgba(0, 0, 0, 0.07);
+    color: white;
+}
+
+// ion-grid {
+//   min-width: 10em;
+//   max-width: 30em;
+//   width: 100%;
+//   .lobby {
+//     width: 100%;
+//     background-color: rgba(0, 0, 0, 0.15);
+//     border-radius: 0.3em;
+//     // filter: blur();
+//     // -webkit-filter: blur(8px);
+//     padding-bottom: 0.5em;
+//     ion-icon {
+//       font-size: 1.5em;
+//       margin-top: -0.6em;
+//       margin-right: -0.1em;
+//     }
+//     ion-icon:hover {
+//       cursor: pointer;
+//     }
+//     ion-item {
+//       color: white;
+//     }
+//     ion-list {
+//       overflow: auto;
+//       height: auto;
+//       max-height: 38vh;
+//       ion-item {
+//         width: 100%;
+//         color: white;
+//         ion-button {
+//           margin-left: 1em;
+//           color: white;
+//           --background: rgba(0, 0, 0, 0.15);
+//         }
+//       }
+//     }
+//   }
+//   ion-segment {
+//     width: 100%;
+//     --background: rgba(0, 0, 0, 0.05);
+//     margin-bottom: 3px;
+//     ion-segment-button {
+//       color: white;
+//     }
+//     .segment-button-checked {
+//       font-weight: bold;
+//       color: var(--ion-color-primary);
+//     }
+//   }
+//   .ion-segment-mode {
+//     height: 5em;
+//     .segment-button-checked {
+//       font-size: 1.5em;
+//       font-weight: bold;
+//       color: var(--ion-color-primary);
+//     }
+//   }
+// }
+// .game-rules-settings {
+//   max-width: 1em;
+//   font-size: 2em;
+//   width: 1em;
+//   margin-right: -1em;
+// }
+// .search-input {
+//   margin-left: 1em;
+// }
+// .play-button {
+//   width: 100%;
+//   font-size: 3em;
+//   height: 3em;
+//   --background: rgba(0, 0, 0, 0.07);
+//   color: white;
+// } 
+// .icon-button {
+//   font-size: 2em;
+//   // margin-top: -4.5em;
+//   margin-left: 0.2em;
+//   cursor: pointer;
+//   display: flex;
+//   flex-direction: row;
+//   .icon-button-text {
+//     font-size: 0.4em;
+//     color: var(--ion-color-primary);
+//     padding-top: 0.7em;
+//     margin-right: 0.5em;
+//   }
+// }
+// .lobby-label {
+//   font-size: 1.5em;
+// }
+// .lobby-icon {
+//   width: 1.7em;
+//   font-size: 2em;
+//   padding-top: 0.8em;
+// }
+// // .lobby-button {
+// //   font-size: 2em;
+// //   margin-left: 0.2em;
+// //   cursor: pointer;
+// //   .play-settings-button-text {
+// //     font-size: 0.4em;
+// //     color: var(--ion-color-primary);
+// //     padding-top: 0.7em;
+// //     margin-right: 0.5em;
+// //   }
+// // }
+// .ion-segment-template {
+//   font-size: 0.5em;
+//   .segment-button-checked {
+//     font-weight: bold;
+//     border-top: solid var(--ion-color-primary) 2px;
+//     border-left: solid var(--ion-color-primary) 2px;
+//     border-right: solid var(--ion-color-primary) 2px;
+//   }
+//   ion-segment-button {
+//     max-width: 17em;
+//   }
+// }

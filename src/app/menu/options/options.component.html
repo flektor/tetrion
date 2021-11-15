@@ -1,0 +1,16 @@
+ 
+<!-- <ion-content class="ion-padding"> -->
+
+  <ion-button (click)="resume()" fill="clear" (mouseenter)="audio.play('click')"> resume </ion-button>
+
+  <ion-button (click)="navigate('video')" fill="clear" (mouseenter)="audio.play('click')"> video </ion-button>
+
+  <ion-button (click)="navigate('audio')" fill="clear" (mouseenter)="audio.play('click')"> audio </ion-button>
+
+  <ion-button (click)="navigate('controls')" fill="clear" (mouseenter)="audio.play('click')"> controls </ion-button>
+
+  <ion-button *ngIf="game.getMode()==='SOLO'" (click)="restart()" fill="clear" (mouseenter)="audio.play('click')"> restart </ion-button>
+
+  <ion-button (click)="exit()" fill="clear" (mouseenter)="audio.play('click')"> exit </ion-button>
+
+<!-- </ion-content> -->

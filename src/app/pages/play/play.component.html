@@ -1,0 +1,177 @@
+<ion-content class="ion-padding">
+
+    <ion-grid>
+
+        <ion-row>
+            <ion-col>
+                <div class="icon-button ion-float-left" (click)="showGameRulesDialog(icon)">
+                    <ion-icon #icon color="primary" name="settings-outline"> </ion-icon>
+                    <div class="icon-button-text">
+                        {{user.config.game.rows}}x{{user.config.game.cols}}
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-button class="play-button" (click)="play()">
+                    Play
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+
+<!-- 
+
+<ion-content class="ion-padding">
+
+    <ion-grid>
+ 
+       <ion-row>
+
+            <ion-segment *ngIf="!user.isOffline" (ionChange)="setMode($event)" class="ion-segment-mode" value='{{user.config.game.mode}}'>
+                <ion-segment-button value="{{gameMode.Solo}}">
+                    solo
+                </ion-segment-button>
+
+                <ion-segment-button value="{{gameMode.OneVsOne}}">
+                    online
+                </ion-segment-button>
+
+            </ion-segment>
+
+        </ion-row>
+
+
+
+        <ng-template #rulesButton>
+            <ion-row>
+                <ion-col>
+                    <div class="icon-button ion-float-left" (click)="showGameRulesDialog(icon)">
+                        <ion-icon #icon color="primary" name="settings-outline"> </ion-icon>
+                        <div class="icon-button-text">
+                            {{user.config.game.rows}}x{{user.config.game.cols}}
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ng-template>
+
+        <ng-template #lobbyButton>
+            <ion-row>
+                <ion-col>
+                    <div class="icon-button ion-float-right" (click)="doShowLobby()">
+                        <div class="icon-button-text">
+                            {{showLobby?"Play":"Lobby"}}
+                        </div>
+                        <ion-icon color="primary" [name]="showLobby
+                            ? isGuest? 'login': 'game-controller-outline'
+                            : 'people-circle-outline'"></ion-icon>
+                    </div>
+                </ion-col>
+
+            </ion-row>
+        </ng-template>
+
+        <ng-container *ngIf="isModeSolo; then rulesButton; else lobbyButton"> </ng-container>
+
+
+
+        <ng-template #playButton>
+            <ion-button class="play-button" (click)="onPlayButtonClicked()">
+                Play
+            </ion-button>
+        </ng-template>
+        <ng-content *ngIf="isModeSolo; then playButton"></ng-content>
+
+
+        <ng-template #oneVsOne>
+
+            <ng-container #loginContainer></ng-container>
+            <ng-template #login>
+
+            </ng-template>
+
+            <ng-template #findGame>
+                <ion-row>
+                    <ion-button class="play-button" (click)="onPlayButtonClicked()" [disabled]='!onlineReady'>
+
+                        <ion-spinner *ngIf='searchingForQuickGame' color="light" style="margin-right: 0.5em;" name="crescent">
+                        </ion-spinner>
+
+                        {{quickGameButtonText}}
+                    </ion-button>
+                </ion-row>
+            </ng-template>
+
+            <ng-template #lobby>
+
+                <div class='lobby'>
+
+                    <ion-item>
+
+                        <div class="lobby-icon">
+                            <ion-icon color="primary" name="people-circle-outline"></ion-icon>
+                        </div>
+                        <ion-label class="lobby-label">
+                            Lobby
+                        </ion-label>
+
+                        <ion-input class="search-input" #search maxlength="15" placeholder="Search for a player" (ionChange)="searchPlayer($event)">
+                        </ion-input>
+
+
+                        <ion-icon color="primary" name="close-circle-outline" (click)="doShowLobby()">
+                            &nbsp;</ion-icon>
+
+                    </ion-item>
+
+
+                    <ion-list>
+
+                        <ion-item *ngIf="users.length===0">
+                            {{search.value===''? 'There are no other players online' : 'There is no player named" ' +search.value +'"!'}}
+                        </ion-item>
+
+
+
+                        <ion-item *ngFor="let user of users">
+                            {{user.username}}
+                            <ion-button slot="end" (click)="challengePlayer(user.username)">
+                                Challenge
+                            </ion-button>
+                            <ion-button slot="end" (click)="viewProfile(user.username)">
+                                Profile
+                            </ion-button>
+
+                        </ion-item>
+
+                    </ion-list>
+
+                </div>
+
+            </ng-template>
+
+            <ng-container *ngIf="showLobby; then lobby; else user.config.isGuest ? login : findGame"> </ng-container>
+
+
+        </ng-template>
+
+
+        <ng-container *ngIf="isModeSolo else oneVsOne"> </ng-container> 
+
+
+
+
+
+
+    </ion-grid>
+
+
+
+</ion-content>
+-->

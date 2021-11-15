@@ -1,0 +1,11 @@
+<div class='skins-grid-wrapper'>
+    <div class='skins-grid-container'>
+
+        <div *ngFor='let index of indices' class='skin'>
+
+            <img #elem [src]='skins[index]' (click)='pick({index:index, element:elem})'>
+
+        </div>
+
+    </div>
+</div>

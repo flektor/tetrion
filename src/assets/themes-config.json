@@ -1,0 +1,83 @@
+[
+  {
+  "name": "default",
+  "custom": false,
+  "bricks": [ {
+      "geometryIndex" : 5,
+      "materialsParams" : [{"color":"#305899"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 15,
+      "materialsParams" : [{"color":"#f78640"},{"color":"#000000"}]
+    },{
+      "geometryIndex" : 20,
+      "materialsParams" : [{"color":"#d5dbe2"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 5,
+      "materialsParams" : [{"color":"#e8c331"},{"color":"#dddddd"}]
+    },{
+      "geometryIndex" : 20,
+      "materialsParams" : [{"color":"#d83a31"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 20,
+      "materialsParams" : [{"color":"#4cba43"},{"color":"#777777"}]
+    },{
+      "geometryIndex" : 20,
+      "materialsParams" : [{"color":"#637c7f"},{"color":"#ffffff"}]
+    }
+  ]
+}, 
+{
+  "name": "blue", 
+  "custom": false,
+  "bricks": [ {
+      "geometryIndex" : 15,
+      "materialsParams" : [{"color":"#2769b5"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 11,
+      "materialsParams" : [{"color":"#0e57ad"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 5,
+      "materialsParams" : [{"color":"#315c8e"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 25,
+      "materialsParams" : [{"color":"#0a69d8"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 36,
+      "materialsParams" : [{"color":"#0a51a3"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 56,
+      "materialsParams" : [{"color":"#1374e2"},{"color":"#ffffff"}]
+    },{
+      "geometryIndex" : 2,
+      "materialsParams" : [{"color":"#34557b"},{"color":"#ffffff"}]
+    }
+  ]
+},
+{
+  "name": "red", 
+  "custom": false,
+  "bricks": [ {
+        "geometryIndex" : 15,
+        "materialsParams" : [{"color":"#b52729"},{"color":"#ffffff"}]
+      },{
+        "geometryIndex" : 11,
+        "materialsParams" : [{"color":"#ad0e11"},{"color":"#ffffff"}]
+      },{
+        "geometryIndex" : 5,
+        "materialsParams" : [{"color":"#72282a"},{"color":"#ffffff"}]
+      },{
+        "geometryIndex" : 25,
+        "materialsParams" : [{"color":"#a30a0d"},{"color":"#ffffff"}]
+      },{
+        "geometryIndex" : 36,
+        "materialsParams" : [{"color":"#b52729"},{"color":"#ffffff"}]
+      },{
+        "geometryIndex" : 56,
+        "materialsParams" : [{"color":"#c71414"},{"color":"#ffffff"}]
+      },{
+        "geometryIndex" : 2,
+        "materialsParams" : [{"color":"#d83a31"},{"color":"#ffffff"}]
+      } 
+    ]
+  }
+]

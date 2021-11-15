@@ -1,0 +1,93 @@
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row class='ion-justify-content-center'>
+
+      <ion-col>
+
+        <ng-template #graph>
+          <div class='transparent-background'>
+
+            <h1 class='title'>  Game Overview </h1>
+            
+            <div>
+              <ngx-charts-line-chart  
+                [scheme]="colorScheme" 
+                [results]="results" 
+                [gradient]="gradient"
+                [xAxis]="showXAxis" [yAxis]="showYAxis" 
+                [showXAxisLabel]="showXAxisLabel" 
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisTickFormatting]="xAxisTickFormattingFn"
+                [rotateXAxisTicks]="rotateXAxisTicks"
+                [xAxisLabel]="xAxisLabel" 
+                [yAxisLabel]="yAxisLabel" 
+                [autoScale]="autoScale" 
+                [legend]="showLegend"
+                legendTitle="players" 
+                legendPosition="top"> 
+              </ngx-charts-line-chart>
+            </div>
+
+            <ion-button class="ion-float-right" (click)="watchReplay()"> Replay </ion-button>
+            <ion-button class="back-button ion-float-right" (click)="showTable()"> Back </ion-button>
+
+          </div>
+        </ng-template>
+
+        <ng-template #history>
+          <div class='transparent-background'>
+
+            <h1 class='title'> Replays </h1>
+
+            <ngx-datatable 
+              [rows]="rows" 
+              [columnMode]="'force'" 
+              [columns]="columns" 
+              [selected]="selected"
+              [selectionType]="'single'" 
+              >
+            </ngx-datatable>
+
+            <ion-button class="ion-float-right" (click)="watchReplay()" [disabled]="selected.length===0"> replay </ion-button>
+            <ion-button class="ion-float-right" (click)="showOverview()" [disabled]="selected.length===0"> overview </ion-button>
+
+          </div>
+        </ng-template>
+
+        <ng-template #buttons> 
+        
+          <div class=' replays-button-wrap'>
+            <div class='replays-button'>
+            
+              <h1 class='title'> replay <br> finished </h1>
+            
+              <ion-button class="ion-float-left" (click)="backToReplays()"> back </ion-button>
+              <ion-button class="ion-float-right" (click)="watchAgain()"> replay </ion-button>
+            
+            </div>
+          </div>
+
+        </ng-template>
+
+
+        <ng-container 
+          *ngIf="displayTable; then history">
+        </ng-container>
+
+        <ng-container
+          *ngIf="displayGraph; then graph">
+        </ng-container>
+
+        <ng-container
+          *ngIf="displayButtons; then buttons">
+        </ng-container> 
+        
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,45 @@
+{
+  "game": {
+    "rows": 15,
+    "cols": 10,
+    "mode": "SOLO"
+  },
+
+  "audio": {
+    "isMusicEnabled": true,
+    "isSoundsEnabled": false,
+    "musicVolume": 50,
+    "soundsVolume": 50
+  },
+
+  "video": {
+    "hasAntialias": true,
+    "hasFog": true,
+    "showStats": true,
+    "castShadows": true,
+    "receiveShadows": true
+  },
+
+  "keys": {
+    "back": "Escape",
+    "fallDown": "Space",
+    "moveLeft": "KeyA",
+    "moveRight": "KeyD",
+    "turnLeft": "KeyW",
+    "turnRight": "KeyS"
+  },
+  
+  "peer": {
+    "signal": "undefined"
+  },
+
+  "fcm": {
+    "hasPermissions": false,
+    "token": "undefined"
+  },
+
+  "theme": {
+    "active": "default",
+    "configs": []
+  }
+}

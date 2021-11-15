@@ -1,0 +1,138 @@
+// import { EventEmitter, Injectable } from "@angular/core";
+// import { IScene } from "./scene.interface";
+// import { Group } from 'three';
+// import { GameStatus, IGameData } from '../engine/game.interface';
+// import { Observable } from 'rxjs';
+
+// @Injectable()
+// export class SceneService implements IScene {
+
+//   public keydown: EventEmitter<KeyboardEvent>;
+//   private ready: Event = new Event('ready');
+//   private isReady: boolean = false;
+//   private scene: IScene;
+
+//   public async onReady(): Promise<void> {
+//     return new Promise(resolve => {
+
+//       if (this.isReady) {
+//         resolve();
+//       }
+
+//       document.addEventListener('ready', () => {
+//         this.isReady = true;
+//         resolve()
+//       }, false);
+//     });
+//   }
+//   public goToIntroView(): void {
+//     this.scene.goToIntroView();
+//   }
+
+//   public goToProfileView(): void {
+//     this.scene.goToProfileView();
+//   }
+
+//   public goToSkinsView(): void {
+//     this.scene.goToSkinsView();
+//   }
+ 
+//   public goToReplaysView(): void {
+//     this.scene.goToReplaysView();
+//   }
+
+//   public restart(): void {
+//     this.scene.restart();
+//   }
+
+//   public getStatus(): GameStatus {
+//     return this.scene.getStatus();
+//   }
+
+//   public setScene(scene: IScene) {
+//     this.scene = scene;
+//     this.keydown = this.scene.keydown;
+//     document.dispatchEvent(this.ready)
+//   }
+
+//   public exitGame(): void {
+//     this.scene.exitGame();
+//   }
+
+//   public onExitGame(): Observable<void> {
+//     return this.scene.onExitGame();
+//   }
+
+//   public async replay(data: IGameData): Promise<void> {
+//     return this.scene.replay(data);
+//   }
+
+//   public setStatsVisible(isTrue: boolean): void {
+//     this.scene.setStatsVisible(isTrue);
+//   }
+
+//   public pause(): void {
+//     this.scene.pause();
+//   }
+
+//   public setFog(isTrue: boolean): void {
+//     this.scene.setFog(isTrue);
+//   }
+
+//   // public restart(): void {
+//   //   this.scene.restart();
+//   // }
+
+//   public play(): void {
+//     this.scene.play();
+//   }
+
+//   public setAntialias(isTrue: boolean): void {
+//     this.scene.setAntialias(isTrue);
+//   }
+
+
+//   public setUIConfig(uiConfig: UIConfig): void {
+//     this.scene.setUIConfig(uiConfig);
+//   }
+
+//   public showLevelBar(isTrue: boolean): void {
+//     this.scene.showLevelBar(isTrue);
+//   }
+
+//   public showNextBlock(isTrue: boolean): void {
+//     this.scene.showNextBlock(isTrue);
+//   }
+
+//   public showActionButtons(isTrue: boolean): void {
+//     this.scene.showActionButtons(isTrue);
+//   }
+
+//   public showMenuButton(isTrue: boolean): void {
+//     this.scene.showMenuButton(isTrue);
+//   }
+
+//   public showGridHelper(isTrue: boolean): void {
+//     this.scene.showGridHelper(isTrue);
+//   }
+
+//   public enableDebugRenderer(isTrue: boolean): void {
+//     this.scene.enableDebugRenderer(isTrue);
+//   }
+
+//   public getSkinsContainer(): Group {
+//     return this.scene.getSkinsContainer();
+//   }
+
+// }
+
+// export interface UIConfig {
+//   showLevelBar: boolean;
+//   showNextBlock: boolean;
+//   showActionButtons: boolean;
+//   showMenuButton: boolean;
+//   showGridHelper: boolean;
+//   enableDebugRenderer: boolean;
+// }
+
+

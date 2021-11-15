@@ -1,0 +1,47 @@
+ion-grid {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    ion-row {
+        width: 100%;
+        align-content: center;
+
+        ion-col {
+            color: white;
+            max-width: 40em;
+ 
+            .transparent-background {
+                background-color: rgba(1, 1, 1, 0.2);
+                border-radius: 0.3em;
+                padding-top: 0.5em;
+                padding-bottom: 3.5em;
+                padding-left: 1em;
+                padding-right: 1em; 
+            }
+
+            .replays-button {
+                background-color: rgba(1, 1, 1, 0.2);
+                padding:  0.5em;  
+                border-radius: 0.3em;
+                max-width: 10.5em;
+            }
+
+            .replays-button-wrap {
+                display: flex;
+                justify-content: center; 
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            ngx-datatable {
+                border-top-left-radius: 0.2em;
+                border-top-right-radius: 0.2em;
+            }
+        }
+    }
+}

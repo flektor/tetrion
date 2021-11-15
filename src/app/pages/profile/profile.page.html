@@ -1,0 +1,90 @@
+<ion-content class="ion-padding">
+
+    <div class='career-summary'>
+
+        <h1 class='title'>Career summary</h1>
+        <div class='content'>
+
+            <div class="profile">
+
+                <h1 class='username'>{{username}}</h1>
+
+                <div class="level">
+                    <levels-achievment #level [level]="maxLevel"></levels-achievment>
+                </div>
+
+
+                <!-- <ion-button *ngIf='username!== user.username' (click)='copyTheme(username)'>
+          <ion-spinner *ngIf='loadingTheme' color='light' name="crescent"></ion-spinner>
+          {{loadingTheme ? 'Loading Theme' :'Copy Theme'}}
+        </ion-button> -->
+            </div>
+
+
+            <div class='career-stats'>
+
+                <!-- <ion-item>
+          <ion-label class="game-mode">game mode:</ion-label>
+          <ion-select #select value='all' class='game-mode-select' (ionChange)='calculateStats(select.value)'>
+            <ion-select-option value="all">all</ion-select-option>
+            <ion-select-option value="solo">solo</ion-select-option>
+            <ion-select-option value="1v1">1v1</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <h2 *ngIf='select.value==="1v1"'> wins: {{total1v1Wins}} </h2>
+        <h2 *ngIf='select.value==="1v1"'> losses: {{total1v1Losses}} </h2>
+        <h2 *ngIf='select.value==="all"'> 1v1 wins: {{total1v1Wins}} </h2>
+        <h2 *ngIf='select.value==="all"'> 1v1 losses: {{total1v1Losses}} </h2> -->
+                <h2> games: {{totalGames}} </h2>
+                <h2> high score: {{highScore}} </h2>
+                <h2> max level: {{maxLevel}} </h2>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</ion-content>
+
+
+<!-- <skins [skinSize]='128' width='500' height='500'></skins> -->
+
+<!-- <ul class="achievments">
+
+    <li>
+      <rank-achievment [data]="{level:1, division:'bronze'}"></rank-achievment>
+    </li>
+    
+    <li>
+      <rank-achievment [data]="{level:2, division:'silver'}"></rank-achievment>
+    </li>
+
+    <li>
+      <rank-achievment [data]="{level:3, division:'gold'}"></rank-achievment>
+    </li>
+
+    <li>
+      <levels-achievment [level]="19"></levels-achievment>
+    </li>
+
+    <li>
+      <tetrion-achievment [value]="3"></tetrion-achievment>
+    </li>
+
+    <li>
+      <smash-achievment></smash-achievment>
+    </li>
+
+    <li>
+      <onfire-achievment></onfire-achievment>
+    </li>
+
+    <li>
+      <colors-achievment></colors-achievment>
+    </li>
+
+  </ul> -->

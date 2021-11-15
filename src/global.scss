@@ -1,0 +1,110 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+ion-modal.auto-height {
+  --height: auto;
+
+  .modal-wrapper {
+    max-width: 20vw;
+    min-width: 20em;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .ion-page {
+      position: relative;
+      contain: content;
+
+      ion-content { 
+        height: 50vh;
+      }
+    }
+  }
+}
+
+ion-button {
+  text-transform: none;
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("src/assets/fonts/play.woff2");
+}
+
+// .ngx-datatable .datatable-body-row.active,
+// .ngx-datatable .datatable-body-row.active .datatable-row-group,
+// .ngx-datatable .datatable-body-row.active,
+// .ngx-datatable .datatable-body-row.active .datatable-row-group {
+//   background-color: #eeeeee;
+// }
+
+// .ngx-datatable .datatable-body-row.active:hover,
+// .ngx-datatable .datatable-body-row.active:hover .datatable-row-group,
+// .ngx-datatable .datatable-body-row.active:hover,
+// .ngx-datatable .datatable-body-row.active:hover .datatable-row-group {
+//   background-color: #eeeeee;
+// }
+
+.ngx-datatable .datatable-row-even {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.ngx-datatable .datatable-row-odd {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ngx-datatable .datatable-header {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ngx-datatable .datatable-body-row:hover,
+.ngx-datatable .datatable-body-row:hover .datatable-row-group,
+.ngx-datatable.single-selection .datatable-body-row.active,
+.ngx-datatable.single-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.multi-selection .datatable-body-row.active,
+.ngx-datatable.multi-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.multi-click-selection .datatable-body-row.active,
+.ngx-datatable.multi-click-selection .datatable-body-row.active .datatable-row-group {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.ngx-datatable .datatable-header-cell,
+.ngx-datatable .datatable-body-cell-label {
+  text-align: center;
+}
+
+.ngx-charts {
+  text {
+    fill: #fff;
+  }
+}

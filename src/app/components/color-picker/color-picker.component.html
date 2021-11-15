@@ -1,0 +1,10 @@
+
+<color-sketch [color]="color" [presetColors]="colors" (onChangeComplete)="changeComplete($event)">
+</color-sketch>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button size="small" class="ion-float-left" (click)="close()">close</ion-button>
+        <ion-button size="small" class="ion-float-right" (click)="pick()">pick</ion-button>
+    </ion-toolbar>
+</ion-footer>

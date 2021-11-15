@@ -1,0 +1,39 @@
+:host {
+  text-transform: none;
+  font-family: Play;
+  color: white;
+}
+ 
+
+ion-button {
+  --box-shadow: none;
+  text-transform: none;
+  --color: white;
+}
+
+ion-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+ion-item,
+ion-item-divider {
+  --background: rgba(0, 0, 0, 0);
+  --color: white;
+}
+
+ion-toolbar {
+  --background: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  --color: white;
+}
+
+.menu {
+  padding: 1em;
+  font-style: play;
+}
+
+.checkbox-text {
+  margin-left: 10px;
+  display: inline;
+  color: white;
+}

@@ -1,0 +1,71 @@
+<ion-content class='no-padding'>
+
+
+
+    <div #container [class]="getGridContainerClassName()">
+
+        <button (click)="prevBlock()" [style.top.px]="arrowsPosition.x-75" [style.left.px]="arrowsPosition.y -170" [class]="getPrevBlockClassName()" (mouseenter)="mouseEnteredPrevButton()" (mouseleave)="mouseLeftPrevButton()" fill="clear">
+            <ion-icon class="arrow-button noselect" name="caret-back-outline"></ion-icon>
+        </button>
+
+        <button (click)="nextBlock()" [style.top.px]="arrowsPosition.x -75" [style.left.px]="arrowsPosition.y + 120" [class]="getNextBlockClassName()" (mouseenter)="mouseEnteredNextButton()" (mouseleave)="mouseLeftNextButton()" fill="clear">
+            <ion-icon class="arrow-button noselect" name="caret-forward-outline"></ion-icon>
+        </button>
+
+        <div [class]='getThemeEditorClassName()'>
+            <ion-list>
+
+                <ion-item>
+                    <ion-label>Theme</ion-label>
+                    <ion-select [value]='themeName' (ionChange)="chooseTheme($event)">
+                        <ion-select-option *ngFor='let name of theme.themeNames' [value]="name">{{name}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item class="color-item noselect" (click)="pickPrimaryColor()">
+                    <div class="color" [style.background]="primaryColor"></div>
+                    <ion-label>Primary Color</ion-label>
+                </ion-item>
+
+                <ion-item class="color-item  noselect" (click)="pickSecondaryColor()">
+                    <div class="color" [style.background]="secondaryColor"></div>
+                    <ion-label>Secondary Color</ion-label>
+                </ion-item>
+
+                <ion-item class="geometry-item noselect" (click)="pickGeometry()">
+                    <ion-label>Geometry</ion-label>
+                </ion-item>
+
+                <!-- <ion-item *ngIf='isCustomTheme'>
+
+          <ion-checkbox checked='permissions===public?true:false' #checkbox1 class="button" style='margin-right:0.5em'
+            (ionChange)='setPermissions(checkbox1.checked? "public": "private")'>
+          </ion-checkbox>
+          public
+        </ion-item> -->
+
+
+                <!-- <ion-item>
+
+          <ion-label>Opponent Theme</ion-label>
+          <ion-select [value]='opponentThemeName' (ionChange)="chooseOpponentTheme($event)">
+            <ion-select-option value="Player's Default">Player's Default</ion-select-option>
+
+            <ion-select-option *ngFor='let name of theme.themeNames' [value]="name">{{name}}</ion-select-option>
+          </ion-select>
+        </ion-item> -->
+
+
+
+
+                <ion-button [disabled]='!isSaveButtonEnabled' class="ion-float-right" small fill="outline" color="light" (click)="save()">
+                    Save
+                </ion-button>
+            </ion-list>
+        </div>
+    </div>
+
+
+    <canvas class="preview" #preview></canvas>
+
+</ion-content>
