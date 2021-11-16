@@ -6,8 +6,7 @@ import { ThemeConfig } from './theme.interface';
 @Injectable()
 export class ThemeService implements OnInit {
 
-  private themeNames: Array<string>;
-
+  themeNames: Array<string>;
 
   async loadPresetThemeConfigs(): Promise<void> {
 

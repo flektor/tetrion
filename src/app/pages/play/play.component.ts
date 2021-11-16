@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { UserService } from 'src/app/services/user/user.service';
 import { GameMode, IGameData } from 'src/app/engine/game.interface';
-import { GameRulesEditorComponent } from 'src/app/components/game-rules-editor/game-rules-editor.component';
+import { BoardEditorComponent } from 'src/app/components/board-editor/board-editor.component';
 import { GameService } from 'src/app/services/game/game.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
@@ -52,7 +52,7 @@ export class PlayComponent implements OnInit {
     console.log({ icon })
     icon.name = 'settings'
     const modal = await this.modalCtrl.create({
-      component: GameRulesEditorComponent,
+      component: BoardEditorComponent,
       backdropDismiss: false,
       cssClass: 'auto-height',
     });

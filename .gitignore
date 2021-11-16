@@ -31,3 +31,9 @@ npm-debug.log*
 /www
 /src/app/firebase.ts
 /src/firebase-messaging-sw.js
+
+/src/app/achivements/colors.component.ts
+/src/app/achivements/onfire.component.ts
+/src/app/achivements/rank.component.ts
+/src/app/achivements/smash.component.ts
+/src/app/achivements/tetrion.component.ts

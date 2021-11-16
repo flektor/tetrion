@@ -5,7 +5,6 @@ import { HitPoints } from 'src/app/components/sprites/sprite';
 import { Tweens } from './tweens';
 import { SimpleStage } from './simple-stage';
 import { Player } from './player';
-import { Snapshot } from './snapshot';
 import { GameStatus, GameMode, GameConfig } from './game.interface';
 import { CylinderInstructions, IWorld } from './physics/world.interface';
 import { World } from './physics/world';
@@ -62,7 +61,6 @@ export class Engine {
     // camera.position.setX(camera.position.x + offsetX);
 
     this.initBoardWalls(this.game.getConfig());
-
 
 
     const skinsRock = this.stage.scene.getObjectByName('skins_rock');
@@ -459,22 +457,6 @@ export class Engine {
   }
 
 
-  getSnapshot(player: Player): Snapshot {
-    const pointers = new Array();
-    let pointer: number = 0;
-    for (const row of player.matrix) {
-      for (const col of row) {
-        if (col) {
-          pointers.push(pointer);
-        }
-        pointer++;
-      }
-    }
-    const snapshot = new Snapshot(pointers);
-    return snapshot;
-  }
-
-
   gameOver(): void {
     if (this.status === GameStatus.GameOver) return;
 
@@ -691,6 +673,8 @@ export class Engine {
     this.boardWalls.setCastShadow(this.castShadows);
     this.boardWalls.setReceiveShadow(this.receiveShadows);
     this.world.setBoard(this.boardWalls.getInstructions());
+
+
   }
 
 

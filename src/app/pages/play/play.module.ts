@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PlayComponent } from './play.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { GameRulesEditorModule } from 'src/app/components/game-rules-editor/game-rules-editor.module'; 
+import { BoardEditorModule } from 'src/app/components/board-editor/board-editor.module'; 
 
 
 const routes: Routes = [
@@ -21,7 +21,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     IonicModule,
-    GameRulesEditorModule,
+    BoardEditorModule,
     RouterModule.forChild(routes)
   ],
   exports: [PlayComponent]

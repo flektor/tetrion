@@ -70,6 +70,7 @@
         "@types/jest": "^26.0.14",
         "@types/node": "^12.11.1",
         "@types/tween.js": "^18.5.1",
+        "angular-cli-ghpages": "^1.0.0-rc.2",
         "codelyzer": "^5.1.2",
         "firebase-tools": "^8.20.0",
         "fuzzy": "^0.1.3",
